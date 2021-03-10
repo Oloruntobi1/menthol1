@@ -1,20 +1,14 @@
 language: go
-
 go:
-  - 1.13.x
-  - 1.14.x
-  - 1.15.x
-
+- 1.13.x
+- 1.14.x
+- 1.15.x
 env:
-  - GO111MODULE=on
-
+- GO111MODULE=on
 before_install:
-  - go get -v golang.org/x/lint/golint
-
+- go get -v golang.org/x/lint/golint
 script:
-  - go test -v ./...
-
-# deploy:
-#   provider: heroku
-#   api_key: 058fbbcd-83db-41ed-b87a-de0700eec45b
-#   app: hergo2
+- go test -v ./...
+deploy:
+  api_key:
+    secure: pyCC3Q6y0E0nktXPd/ry5G66G0Tes/WAmMCZ+NTISctwv81nUKEfzCz6lBsDkhxCoEb0JWqZ/Ax+7lu7bAt2Yem1bu0IEcapWN0ESI055DzdXMHEMwLB+aoMFFMXXRFPwR35kJKgYEvGf/IVvf72Y84uP/jmwmV3ioEG8A8PMHrlZGRgYe95RaxSQWAgrglG6dXoAOTAD8tKa+GUXNe+71EOb/bSUitN2ujuxnaGX5OE/Oht333MuYw7KoGn941FqFtU/2ICgTmDeLPU6Cx1XesxR2ti3nC5TDzE1bJn1+L1UmMZxYdx9rO+OHEKmtxCIsFKxKQn7pzW0mQWzFiVSXv9PVO43+qdWRKOtRDJrJYCgbXeJGsRcAlVvuC0hXhx2bLMle1LtT3+6H/pC8focbCIPQK4MvHlYxTpm4YmZkxTLwEJjTVDsMa0gJ5JgrsjAolWjf8kLOfEQeAU6DexDLh0xZiOBrMTkaQDcKp37BPv2TY552rClEWw1Drimtj5UFAhj+7IN57ri0Qw7eZhED+50XuvpW9PRVTiYxY0uG3m6fsr1R7REr1FyZvM7lwVX3LSiUFS30BsNMN8A1OBcP10qpEQBsxsfiZiH3uJJNqnlRqYgsGGnORiOfNGGgsZApyg/rAYNUjjKlxSQ002qP+OE7+oWR/GhxDBgBSEQIo=
