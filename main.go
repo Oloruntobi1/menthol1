@@ -10,7 +10,7 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.GET("/", handleSum)
+	router.GET("/sum", handleSum)
 
 	port := os.Getenv("PORT")
 	router.Run(":"+port)
@@ -18,9 +18,9 @@ func main() {
 
 func handleSum(ctx *gin.Context) {
 
-	res := doSum(5, 6)
+	// res := doSum(5, 6)
 
-	ctx.JSON(http.StatusOK, res)
+	ctx.JSON(http.StatusOK, "I dey here!")
 
 }
 
